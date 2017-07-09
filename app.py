@@ -89,7 +89,7 @@ def welcome_message(recipient_id):
         "persistent_menu":[
             {
             "locale":"default",
-            "composer_input_disabled":true,
+            "composer_input_disabled":"true",
             "call_to_actions":[
                 {
                 "title":"Info",
@@ -117,7 +117,7 @@ def welcome_message(recipient_id):
             },
             {
             "locale":"zh_CN",
-            "composer_input_disabled":false
+            "composer_input_disabled":"false"
             }
         ]           
     })
