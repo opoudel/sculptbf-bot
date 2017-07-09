@@ -50,8 +50,27 @@ def webhook():
                     sender_id = messaging_event["sender"]["id"]
                     recipient_id = messaging_event["recipient"]["id"]
                     if messaging_event["postback"]["payload"] == "GET_STARTED_PAYLOAD":
-                        send_message(sender_id, "Welcome to Body & Face Clinic {{user_first_name}}!")
+                        welcome_message(sender_id)
     return "ok", 200
+
+def welcome_message(recipient_id):
+
+    params = {
+        "access_token": os.environ["PAGE_ACCESS_TOKEN"]
+    }
+    headers = {
+        "Content-Type": "application/json"
+    }
+    data = json.dumps({
+        "setting_type": "greeting",
+        "greeting": {
+            "text": "Hi {{user_first_name}}! Welcome to Body & Face Clinic..."
+        }
+    })
+    r = requests.post("https://graph.facebook.com/v2.9/me/messages", params=params, headers=headers, data=data)
+    if r.status_code != 200:
+        log(r.status_code)
+        log(r.text)
 
 def send_message(recipient_id, message_text):
 
