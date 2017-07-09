@@ -48,8 +48,7 @@ def webhook():
                     pass
 
                 if messaging_event.get("postback"):  # user clicked/tapped "postback" button in earlier message
-                    if messaging_event["postback"]["payload"] == "GET_STARTED_PAYLOAD":
-                        welcome_message()
+                    pass
 
     return "ok", 200
 
