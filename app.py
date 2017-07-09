@@ -62,6 +62,9 @@ def welcome_message(recipient_id):
         "Content-Type": "application/json"
     }
     data = json.dumps({
+        "recipient": {
+            "id": recipient_id
+        },
         "setting_type": "greeting",
         "greeting": {
             "text": "Hi {{user_first_name}}! Welcome to Body & Face Clinic..."
