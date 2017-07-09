@@ -19,6 +19,11 @@ def verify():
 
     return "Hello world", 200
 
+@app.route('/setup', methods=['GETS'])
+def setup():
+    welcome_message()
+    return "ok", 200
+
 
 @app.route('/', methods=['POST'])
 def webhook():
@@ -48,10 +53,29 @@ def webhook():
                     pass
 
                 if messaging_event.get("postback"):  # user clicked/tapped "postback" button in earlier message
-                    pass
+                    if messaging_event["get_started"]["payload"] == "GET_STARTED_PAYLOAD":
+                        welcome_message(sender_id, "Welcome to Body and Face Clinic!")    
 
     return "ok", 200
 
+
+def welcome_message():
+
+    params = {
+        "access_token": os.environ["PAGE_ACCESS_TOKEN"]
+    }
+    headers = {
+        "Content-Type": "application/json"
+    }
+    data = json.dumps({
+        "get_started" : {
+            "payload":"GET_STARTED_PAYLOAD"
+        }
+    })
+    r = requests.post("https://graph.facebook.com/v2.9/me/messages", params=params, headers=headers, data=data)
+    if r.status_code != 200:
+        log(r.status_code)
+        log(r.text)
 
 def send_message(recipient_id, message_text):
 
