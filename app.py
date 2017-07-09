@@ -19,7 +19,7 @@ def verify():
 
     return "Hello world", 200
 
-@app.route('/setup', methods=['GETS'])
+@app.route('/setup', methods=['GET'])
 def setup():
     welcome_message()
     return "ok", 200
