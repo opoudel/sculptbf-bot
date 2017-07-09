@@ -28,6 +28,8 @@ def webhook():
     data = request.get_json()
     log(data)  # you may not want to log every incoming message in production, but it's good for testing
 
+# {u'entry': [{u'id': u'312878285830114', u'time': 1499635602895, u'messaging': [{u'recipient': {u'id': u'312878285830114'}, u'timestamp': 1499635602895, u'sender': {u'id': u'1502433903128524'}, u'postback': {u'payload': u'GET_STARTED_PAYLOAD'}}]}], u'object': u'page'}
+
     if data["object"] == "page":
 
         for entry in data["entry"]:
@@ -46,8 +48,8 @@ def webhook():
                     pass
 
                 if messaging_event.get("postback"):  # user clicked/tapped "postback" button in earlier message
-                    pass
-
+                    if messaging_event["postback"]["payload"] == "GET_STARTED_PAYLOAD":
+                        welcome_message()
     return "ok", 200
 
 
