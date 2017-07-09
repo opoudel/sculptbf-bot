@@ -50,7 +50,7 @@ def webhook():
                     sender_id = messaging_event["sender"]["id"]
                     recipient_id = messaging_event["recipient"]["id"]
                     if messaging_event["postback"]["payload"] == "GET_STARTED_PAYLOAD":
-                        welcome_message()
+                        welcome_message(recipient_id)
     return "ok", 200
 
 
