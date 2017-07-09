@@ -48,7 +48,7 @@ def webhook():
                     sender_id = messaging_event["sender"]["id"]
                     recipient_id = messaging_event["recipient"]["id"]
                     if messaging_event["postback"]["payload"] == "GET_STARTED_PAYLOAD":
-                        welcome_message(recipient_id)
+                        welcome_message(sender_id)
     return "ok", 200
 
 def welcome_message(recipient_id):
@@ -64,7 +64,7 @@ def welcome_message(recipient_id):
             "id": recipient_id
         },
         "message": {
-            "text": "Welcome to Body & Face Clinic!"
+            "text": "Welcome to Body & Face Clinic! I am a bot, How can I help you?"
         }
     })
     r = requests.post("https://graph.facebook.com/v2.9/me/messages", params=params, headers=headers, data=data)
