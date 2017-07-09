@@ -49,30 +49,7 @@ def webhook():
                     recipient_id = messaging_event["recipient"]["id"]
                     if messaging_event["postback"]["payload"] == "GET_STARTED_PAYLOAD":
                         welcome_message(sender_id)
-                    else:
-                        show_menu(sender_id)    
     return "ok", 200
-
-def show_menu(recipient_id):
-    params = {
-        "access_token": os.environ["PAGE_ACCESS_TOKEN"]
-    }
-    headers = {
-        "Content-Type": "application/json"
-    }
-    data = json.dumps({
-        "recipient": {
-            "id": recipient_id
-        },
-        "message": {
-            "text": "Welcome to Body & Face Clinic! I am a bot, How can I help you?"
-        }
-    })
-    r = requests.post("https://graph.facebook.com/v2.9/me/messages", params=params, headers=headers, data=data)
-    if r.status_code != 200:
-        log(r.status_code)
-        log(r.text)
-
  
 def welcome_message(recipient_id):
 
@@ -86,40 +63,48 @@ def welcome_message(recipient_id):
         "recipient": {
             "id": recipient_id
         },
-        "persistent_menu":[
-            {
-            "locale":"default",
-            "composer_input_disabled":"true",
-            "call_to_actions":[
+        "message": {
+            "text": "Welcome to Body & Face Clinic! I am a bot, How can I help you?",
+            "persistent_menu":[
                 {
-                "title":"Info",
-                "type":"nested",
-                "call_to_actions":[
+                  "locale":"default",
+                  "composer_input_disabled":"true",
+                  "call_to_actions":[
                     {
-                    "title":"Help",
-                    "type":"postback",
-                    "payload":"HELP_PAYLOAD"
+                      "title":"My Account",
+                      "type":"nested",
+                      "call_to_actions":[
+                        {
+                          "title":"Pay Bill",
+                          "type":"postback",
+                          "payload":"PAYBILL_PAYLOAD"
+                        },
+                        {
+                          "title":"History",
+                          "type":"postback",
+                          "payload":"HISTORY_PAYLOAD"
+                        },
+                        {
+                          "title":"Contact Info",
+                          "type":"postback",
+                          "payload":"CONTACT_INFO_PAYLOAD"
+                        }
+                      ]
                     },
                     {
-                    "title":"Contact Me",
-                    "type":"postback",
-                    "payload":"CONTACT_INFO_PAYLOAD"
+                      "type":"web_url",
+                      "title":"Latest News",
+                      "url":"http://petershats.parseapp.com/hat-news",
+                      "webview_height_ratio":"full"
                     }
-                ]
+                  ]
                 },
                 {
-                "type":"web_url",
-                "title":"Visit website ",
-                "url":"http://www.techiediaries.com",
-                "webview_height_ratio":"full"
+                  "locale":"zh_CN",
+                  "composer_input_disabled":"false"
                 }
-            ]
-            },
-            {
-            "locale":"zh_CN",
-            "composer_input_disabled":"false"
-            }
-        ]           
+          ]            
+        }
     })
     r = requests.post("https://graph.facebook.com/v2.9/me/messages", params=params, headers=headers, data=data)
     if r.status_code != 200:
