@@ -19,11 +19,6 @@ def verify():
 
     return "Hello world", 200
 
-@app.route('/setup', methods=['GET'])
-def setup():
-    welcome_message()
-    return "ok", 200
-
 
 @app.route('/', methods=['POST'])
 def webhook():
@@ -54,7 +49,7 @@ def webhook():
 
                 if messaging_event.get("postback"):  # user clicked/tapped "postback" button in earlier message
                     if messaging_event["get_started"]["payload"] == "GET_STARTED_PAYLOAD":
-                        welcome_message(sender_id, "Welcome to Body and Face Clinic!")    
+                        welcome_message()
 
     return "ok", 200
 
