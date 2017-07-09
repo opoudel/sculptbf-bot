@@ -34,10 +34,9 @@ def webhook():
 
         for entry in data["entry"]:
             for messaging_event in entry["messaging"]:
-
-                if messaging_event.get("message"):  # someone sent us a message
                     sender_id = messaging_event["sender"]["id"]        # the facebook ID of the person sending you the message
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
+                if messaging_event.get("message"):  # someone sent us a message
                     message_text = messaging_event["message"]["text"]  # the message's text
 
                     send_message(sender_id, "Welcome to Body & Face Clinic {{user_first_name}}!")                    
@@ -48,12 +47,14 @@ def webhook():
                     pass
 
                 if messaging_event.get("postback"):  # user clicked/tapped "postback" button in earlier message
+                    sender_id = messaging_event["sender"]["id"]
+                    recipient_id = messaging_event["recipient"]["id"]
                     if messaging_event["postback"]["payload"] == "GET_STARTED_PAYLOAD":
                         welcome_message()
     return "ok", 200
 
 
-def welcome_message():
+def welcome_message(recipient_id):
 
     params = {
         "access_token": os.environ["PAGE_ACCESS_TOKEN"]
