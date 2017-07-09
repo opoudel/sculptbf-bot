@@ -48,10 +48,10 @@ def webhook():
                     sender_id = messaging_event["sender"]["id"]
                     recipient_id = messaging_event["recipient"]["id"]
                     if messaging_event["postback"]["payload"] == "GET_STARTED_PAYLOAD":
-                        welcome_message(sender_id, "Test")
+                        welcome_message(sender_id)
     return "ok", 200
 
-def welcome_message(recipient_id, message_text):
+def welcome_message(recipient_id):
 
     params = {
         "access_token": os.environ["PAGE_ACCESS_TOKEN"]
@@ -63,8 +63,7 @@ def welcome_message(recipient_id, message_text):
         "recipient": {
             "id": recipient_id
         },
-        "setting_type":"greeting",
-        "greeting": {
+        "message": {
             "text": "Hi {{user_first_name}}! Welcome to Body & Face Clinic..."
         }
     })
