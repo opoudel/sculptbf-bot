@@ -17,7 +17,7 @@ def aboutus(recipient_id):
                     "subtitle":"We are located at: Unit D,248 Marua Road, Mount Wellington,1051 Auckland",
                     "default_action": {
                       "type":"web_url",
-                      "url":"http://sculptbf.co.nz/index.php/our-prices-offers/",
+                      "url":"http://sculptbf.co.nz/index.php/our-prices-offers",
                       "webview_height_ratio": "tall",
                       "fallback_url": "http://www.sculptbf.co.nz"
                     },
