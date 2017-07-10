@@ -23,11 +23,6 @@ def menu(recipient_id):
                     "payload":"VIEW_PACKAGES_PAYLOAD"
                   },
                   {
-                    "type":"postback",
-                    "title": "About Us",
-                    "payload":"ABOUT_US_PAYLOAD"
-                  },
-                  {
                     "type":"phone_number",
                     "payload":"+18576360526",
                     "title": "Call Representative"
