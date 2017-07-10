@@ -11,7 +11,6 @@ def morepackages(recipient_id):
             "payload": {
                 "template_type": "list",
                 "elements": [
-,
                     {
                         "title": "3 X Face or Neck Treatment",
                         "image_url": "https://sculptbf-bot.herokuapp.com/static/3xfaceneck.png",
