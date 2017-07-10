@@ -24,6 +24,11 @@ def aboutus(recipient_id):
                       },
                       {
                         "type":"postback",
+                        "payload":"VIEW_PACKAGES_PAYLOAD",
+                        "title": "Packages & Deals"
+                      },
+                      {
+                        "type":"postback",
                         "payload":"GET_STARTED_PAYLOAD",
                         "title": "Go back"
                       }

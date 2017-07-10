@@ -19,6 +19,11 @@ def menu(recipient_id):
                   },
                   {
                     "type":"postback",
+                    "title": "Packages & Deals",
+                    "payload":"VIEW_PACKAGES_PAYLOAD"
+                  },
+                  {
+                    "type":"postback",
                     "title": "About Us",
                     "payload":"ABOUT_US_PAYLOAD"
                   },

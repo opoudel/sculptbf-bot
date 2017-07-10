@@ -6,10 +6,12 @@ import requests
 import payloads
 import payloads.aboutus
 import payloads.menu
+import payloads.packages
+import payloads.morepackages
 
 from flask import Flask, request
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='./static')
 
 
 @app.route('/', methods=['GET'])
@@ -53,6 +55,10 @@ def webhook():
                         send_message(sender_id, payloads.menu.menu(sender_id))
                     if messaging_event["postback"]["payload"] == "ABOUT_US_PAYLOAD":
                         send_message(sender_id, payloads.aboutus.aboutus(sender_id))
+                    if messaging_event["postback"]["payload"] == "VIEW_PACKAGES_PAYLOAD":
+                        send_message(sender_id, payloads.packages.packages(sender_id))
+                    if messaging_event["postback"]["payload"] == "VIEW_MORE_PACKAGES_PAYLOAD":
+                        send_message(sender_id, payloads.morepackages.morepackages(sender_id))
     return "ok", 200
  
 def send_message(recipient_id, data):
