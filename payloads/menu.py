@@ -10,7 +10,7 @@ def menu(recipient_id):
               "type": "template",
               "payload": {
                 "template_type": "button",
-                "text": "Select from available menu where you want to go from here?"
+                "text": "Select from available menu where you want to go from here?",
                 "buttons":[
                   {
                     "type":"web_url",
