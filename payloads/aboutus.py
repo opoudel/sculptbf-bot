@@ -18,7 +18,6 @@ def aboutus(recipient_id):
                     "default_action": {
                       "type":"web_url",
                       "url":"http://sculptbf.co.nz/index.php/our-prices-offers/",
-                      "messenger_extensions": "true",
                       "webview_height_ratio": "tall",
                       "fallback_url": "http://www.sculptbf.co.nz"
                     },
