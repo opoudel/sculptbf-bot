@@ -3,7 +3,9 @@ import sys
 import json
 
 import requests
-from payloads import data, menu, aboutus
+import payloads
+import payloads.aboutus
+import payloads.menu
 
 from flask import Flask, request
 
