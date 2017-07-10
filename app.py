@@ -63,48 +63,15 @@ def welcome_message(recipient_id):
         "recipient": {
             "id": recipient_id
         },
-        "message": {
-            "text": "Welcome to Body & Face Clinic! I am a bot, How can I help you?",
-            "persistent_menu":[
-                {
-                  "locale":"default",
-                  "composer_input_disabled":"true",
-                  "call_to_actions":[
-                    {
-                      "title":"My Account",
-                      "type":"nested",
-                      "call_to_actions":[
-                        {
-                          "title":"Pay Bill",
-                          "type":"postback",
-                          "payload":"PAYBILL_PAYLOAD"
-                        },
-                        {
-                          "title":"History",
-                          "type":"postback",
-                          "payload":"HISTORY_PAYLOAD"
-                        },
-                        {
-                          "title":"Contact Info",
-                          "type":"postback",
-                          "payload":"CONTACT_INFO_PAYLOAD"
-                        }
-                      ]
-                    },
-                    {
-                      "type":"web_url",
-                      "title":"Latest News",
-                      "url":"http://petershats.parseapp.com/hat-news",
-                      "webview_height_ratio":"full"
-                    }
-                  ]
-                },
-                {
-                  "locale":"zh_CN",
-                  "composer_input_disabled":"false"
-                }
-          ]            
-        }
+        "timestamp":1458692752478,
+        "postback":{
+            "payload": USER_DEFINED_PAYLOAD,
+            "referral": {
+                "ref": USER_DEFINED_REFERRAL_PARAM,
+                "source": "SHORTLINK",
+                "type": "OPEN_THREAD",
+            }
+        }        
     })
     r = requests.post("https://graph.facebook.com/v2.9/me/messages", params=params, headers=headers, data=data)
     if r.status_code != 200:
