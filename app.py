@@ -41,7 +41,7 @@ def webhook():
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
 
-                    send_message(sender_id, payloads.data)
+                    send_message(sender_id, payloads.message(sender_id))
                 if messaging_event.get("delivery"):  # delivery confirmation
                     pass
 
@@ -52,13 +52,12 @@ def webhook():
                     sender_id = messaging_event["sender"]["id"]
                     recipient_id = messaging_event["recipient"]["id"]
                     if messaging_event["postback"]["payload"] == "GET_STARTED_PAYLOAD":
-                        send_message(sender_id, payloads.menu.data)
+                        send_message(sender_id, payloads.menu.menu(sender_id))
                     if messaging_event["postback"]["payload"] == "ABOUT_US_PAYLOAD":
-                        send_message(sender_id, payloads.aboutus.data)
+                        send_message(sender_id, payloads.aboutus.menu(sender_id))
     return "ok", 200
  
 def send_message(recipient_id, data):
-
     params = {
         "access_token": os.environ["PAGE_ACCESS_TOKEN"]
     }
