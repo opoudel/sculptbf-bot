@@ -73,7 +73,7 @@ def welcome_message(recipient_id):
             }
         }        
     })
-    r = requests.post("https://graph.facebook.com/v2.9/me/messages", params=params, headers=headers, data=data)
+    r = requests.post("https://graph.facebook.com/v2.9/me/messenger_profile", params=params, headers=headers, data=data)
     if r.status_code != 200:
         log(r.status_code)
         log(r.text)
