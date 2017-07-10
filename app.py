@@ -63,17 +63,45 @@ def welcome_message(recipient_id):
         "recipient": {
             "id": recipient_id
         },
-        "timestamp":1458692752478,
-        "postback":{
-            "payload": USER_DEFINED_PAYLOAD,
-            "referral": {
-                "ref": USER_DEFINED_REFERRAL_PARAM,
-                "source": "SHORTLINK",
-                "type": "OPEN_THREAD",
+        "message": {
+          "attachment": {
+            "type": "template",
+            "payload": {
+              "template_type": "generic",
+              "elements": [{
+                "title": "rift",
+                "subtitle": "Next-generation virtual reality",
+                "item_url": "https://www.oculus.com/en-us/rift/",               
+                "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+                "buttons": [{
+                  "type": "web_url",
+                  "url": "https://www.oculus.com/en-us/rift/",
+                  "title": "Open Web URL"
+                }, {
+                  "type": "postback",
+                  "title": "Call Postback",
+                  "payload": "Payload for first bubble",
+                }],
+              }, {
+                "title": "touch",
+                "subtitle": "Your Hands, Now in VR",
+                "item_url": "https://www.oculus.com/en-us/touch/",               
+                "image_url": "http://messengerdemo.parseapp.com/img/touch.png",
+                "buttons": [{
+                  "type": "web_url",
+                  "url": "https://www.oculus.com/en-us/touch/",
+                  "title": "Open Web URL"
+                }, {
+                  "type": "postback",
+                  "title": "Call Postback",
+                  "payload": "Payload for second bubble",
+                }]
+              }]
             }
-        }        
+          }
+        }
     })
-    r = requests.post("https://graph.facebook.com/v2.9/me/messenger_profile", params=params, headers=headers, data=data)
+    r = requests.post("https://graph.facebook.com/v2.9/me/messages", params=params, headers=headers, data=data)
     if r.status_code != 200:
         log(r.status_code)
         log(r.text)
