@@ -3,6 +3,8 @@ import sys
 import json
 
 import requests
+from payloads import data, menu, aboutus
+
 from flask import Flask, request
 
 app = Flask(__name__)
@@ -37,7 +39,7 @@ def webhook():
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
 
-                    send_message(sender_id, "Woot Woot!")
+                    send_message(sender_id, payloads.data)
                 if messaging_event.get("delivery"):  # delivery confirmation
                     pass
 
@@ -48,10 +50,12 @@ def webhook():
                     sender_id = messaging_event["sender"]["id"]
                     recipient_id = messaging_event["recipient"]["id"]
                     if messaging_event["postback"]["payload"] == "GET_STARTED_PAYLOAD":
-                        welcome_message(sender_id)
+                        send_message(sender_id, payloads.menu.data)
+                    if messaging_event["postback"]["payload"] == "ABOUT_US_PAYLOAD":
+                        send_message(sender_id, payloads.aboutus.data)
     return "ok", 200
  
-def welcome_message(recipient_id):
+def send_message(recipient_id, data):
 
     params = {
         "access_token": os.environ["PAGE_ACCESS_TOKEN"]
@@ -59,71 +63,7 @@ def welcome_message(recipient_id):
     headers = {
         "Content-Type": "application/json"
     }
-    data = json.dumps({
-        "recipient": {
-            "id": recipient_id
-        },
-        "message": {
-          "attachment": {
-            "type": "template",
-            "payload": {
-              "template_type": "generic",
-              "elements": [{
-                "title": "rift",
-                "subtitle": "Next-generation virtual reality",
-                "item_url": "https://www.oculus.com/en-us/rift/",               
-                "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
-                "buttons": [{
-                  "type": "web_url",
-                  "url": "https://www.oculus.com/en-us/rift/",
-                  "title": "Open Web URL"
-                }, {
-                  "type": "postback",
-                  "title": "Call Postback",
-                  "payload": "Payload for first bubble",
-                }],
-              }, {
-                "title": "touch",
-                "subtitle": "Your Hands, Now in VR",
-                "item_url": "https://www.oculus.com/en-us/touch/",               
-                "image_url": "http://messengerdemo.parseapp.com/img/touch.png",
-                "buttons": [{
-                  "type": "web_url",
-                  "url": "https://www.oculus.com/en-us/touch/",
-                  "title": "Open Web URL"
-                }, {
-                  "type": "postback",
-                  "title": "Call Postback",
-                  "payload": "Payload for second bubble",
-                }]
-              }]
-            }
-          }
-        }
-    })
-    r = requests.post("https://graph.facebook.com/v2.9/me/messages", params=params, headers=headers, data=data)
-    if r.status_code != 200:
-        log(r.status_code)
-        log(r.text)
-
-def send_message(recipient_id, message_text):
-
-    log("sending message to {recipient}: {text}".format(recipient=recipient_id, text=message_text))
-
-    params = {
-        "access_token": os.environ["PAGE_ACCESS_TOKEN"]
-    }
-    headers = {
-        "Content-Type": "application/json"
-    }
-    data = json.dumps({
-        "recipient": {
-            "id": recipient_id
-        },
-        "message": {
-            "text": message_text
-        }
-    })
+    data = data
     r = requests.post("https://graph.facebook.com/v2.9/me/messages", params=params, headers=headers, data=data)
     if r.status_code != 200:
         log(r.status_code)
