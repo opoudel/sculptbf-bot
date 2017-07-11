@@ -5,7 +5,15 @@ def message(recipient_id):
 	        "recipient": {
 	            "id": recipient_id
 	        },
-	        "message": {
-	            "text": "Woot Woot!"
-	        }
-	    })
+          "message": {
+            "attachment": {
+              "type": "template",
+              "payload": {
+                "template_type": "generic",
+							  "get_started":{
+							    "payload":"GET_STARTED_PAYLOAD"
+							  }                
+              }
+            }
+          }
+   })
