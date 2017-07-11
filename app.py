@@ -61,7 +61,7 @@ def webhook():
                     if messaging_event["postback"]["payload"] == "VIEW_MORE_PACKAGES_PAYLOAD":
                         send_message(sender_id, payloads.morepackages.morepackages(sender_id))
                     if messaging_event["postback"]["payload"] == "VIEW_MORE_PACKAGES1_PAYLOAD":
-                        send_message(sender_id, payloads.morepackages.morepackages1(sender_id))
+                        send_message(sender_id, payloads.morepackages1.morepackages(sender_id))
     return "ok", 200
  
 def send_message(recipient_id, data):
