@@ -9,7 +9,7 @@ def message(recipient_id):
             "attachment": {
               "type": "template",
               "payload": {
-                "template_type": "generic",
+                "template_type": "button",
                 "text": "Welcome back to Body & Face Clinic! \nHow can I help you?\n",
                 "buttons":[
                   {
