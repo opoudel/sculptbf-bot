@@ -18,7 +18,8 @@ def packages(recipient_id):
                                 {
                                     "type": "web_url",
                                     "title": "Email Now",
-                                    "url": "http://sculptbf.co.nz/index.php/our-prices-offers/"
+                                    "url": "http://sculptbf.co.nz/index.php/our-prices-offers/",
+                                    "webview_height_ratio": "compact"
                                 }
                             ]
                         },
@@ -29,7 +30,8 @@ def packages(recipient_id):
                                 {
                                     "type": "web_url",
                                     "title": "Email Now",
-                                    "url": "http://sculptbf.co.nz/index.php/our-prices-offers/"
+                                    "url": "http://sculptbf.co.nz/index.php/our-prices-offers/",
+                                    "webview_height_ratio": "compact"
                                 }
                             ]
                         }
