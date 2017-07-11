@@ -19,7 +19,7 @@ def aboutus(recipient_id):
                       {
                         "type":"web_url",
                         "title":"Our Services",
-                        "subtitle": "Go online for detail..."
+                        "subtitle": "Go online for detail...",
                         "url":"http://sculptbf.co.nz/index.php/our-prices-offers"
                       },
                       {
