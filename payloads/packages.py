@@ -18,30 +18,56 @@ def packages(recipient_id):
                             "default_action": {
                                 "type": "web_url",
                                 "url": "http://sculptbf.co.nz/index.php/our-prices-offers/",
-                                "webview_height_ratio": "compact"
+                                "webview_height_ratio": "tall"
                             },
                             "buttons": [
                                 {
                                     "type": "web_url",
-                                    "title": "Email Now",
+                                    "title": "View",
                                     "url": "http://sculptbf.co.nz/index.php/our-prices-offers/",
-                                    "webview_height_ratio": "compact"
+                                    "webview_height_ratio": "tall"
                                 }
                             ]
                         },
                         {
-                            "title": "Our affordable packaged plans designed just for you...",
-                            "subtitle": "Select plan that best suit your need",
+                            "title": "Dermal Pigmentation or Freckles",
+                            "image_url": "https://sculptbf-bot.herokuapp.com/static/FacialPeel-1.png",
+                            "subtitle": "Price: $600... includes: 3 X Clarity Peel, 3 x Lactic Peel & 1 Set of Home Care Product",
                             "buttons": [
                                 {
                                     "type": "web_url",
                                     "title": "Email Now",
-                                    "url": "http://sculptbf.co.nz/index.php/our-prices-offers/",
-                                    "webview_height_ratio": "compact"
+                                    "url": "http://sculptbf.co.nz/index.php/contact-us/",
+                                    "webview_height_ratio": "tall"
                                 }
-                            ]
-                        }
-                    ],
+                            ]                
+                        },
+                        {
+                            "title": "Photo Rejuvenation Deal",
+                            "image_url": "https://sculptbf-bot.herokuapp.com/static/photoReju.png",
+                            "subtitle": "Price: $450... includes: I2PL Plus x 6 Session (Face Only), 1 Hair cut Free ",
+                            "buttons": [
+                                {
+                                    "type": "web_url",
+                                    "title": "Email Now",
+                                    "url": "https://sculptbf.co.nz/index.php/contact-us/",
+                                    "webview_height_ratio": "tall"
+                                }
+                            ]                
+                        },
+                        {
+                            "title": "Photo Rejuvenation Microdermabrasion",
+                            "image_url": "https://sculptbf-bot.herokuapp.com/static/photorejumicro.png",
+                            "subtitle": "Price: $169... includes: 3 x Microdermabrasion with TNS Mask, 3 X LED Face Mask",
+                            "buttons": [
+                                {
+                                    "type": "web_url",
+                                    "title": "Email Now",
+                                    "url": "https://sculptbf.co.nz/index.php/contact-us/",
+                                    "webview_height_ratio": "tall"
+                                }
+                            ]                
+                        }                    ],
                     "buttons": [
                         {
                             "title": "View More",

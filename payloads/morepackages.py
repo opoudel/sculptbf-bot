@@ -17,12 +17,10 @@ def morepackages(recipient_id):
                         "subtitle": "Price: $1800... includes: 6 Syringes of Restylane Skin Booster or Redensity (I) with Vital Injection, 3 x LED Therapy, Can add Pelleve Face OR Neck Lift & Tightening only $150 per Session",
                         "buttons": [
                             {
-                                "title": "Email Now",
                                 "type": "web_url",
-                                "messenger_extensions": "true",
+                                "title": "Email Now",
                                 "url": "https://sculptbf.co.nz/index.php/contact-us/",
-                                "webview_height_ratio": "tall",
-                                "fallback_url": "http://sculptbf.co.nz"
+                                "webview_height_ratio": "tall"
                             }
                         ]            
                     }
