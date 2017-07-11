@@ -6,7 +6,7 @@ def packages(recipient_id):
               "id": recipient_id
           },
           "whitelisted_domains":[
-             "https://www.sculptbf.co.nz/"
+             "https://www.sculptbf.co.nz"
           ],          
         "message": {
         "attachment": {
