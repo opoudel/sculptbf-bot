@@ -11,7 +11,7 @@ import payloads.morepackages
 
 from flask import Flask, request
 
-app = Flask(__name__, static_folder='./static')
+app = Flask(__name__, static_url_path='/static')
 
 
 @app.route('/', methods=['GET'])
