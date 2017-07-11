@@ -30,7 +30,7 @@ def packages(recipient_id):
                             ]
                         },
                         {
-                            "title": "Dermal Pigmentation or Freckles\nPrice: $600 only",
+                            "title": "Dermal Pigmentation or Freckles ($600 only)",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/FacialPeel-1.png",
                             "subtitle": "Includes: \n\t3 X Clarity Peel, \n\t3 x Lactic Peel, \n\t1 Set of Home Care Product",
                             "buttons": [
@@ -43,9 +43,9 @@ def packages(recipient_id):
                             ]                
                         },
                         {
-                            "title": "Photo Rejuvenation Deal",
+                            "title": "Photo Rejuvenation Deal ($450 only)",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/photoReju.png",
-                            "subtitle": "Price: $450... includes: I2PL Plus x 6 Session (Face Only), 1 Hair cut Free ",
+                            "subtitle": "Includes: \n\tI2PL Plus x 6 Session (Face Only)\n\t1 Hair cut Free ",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -56,9 +56,9 @@ def packages(recipient_id):
                             ]                
                         },
                         {
-                            "title": "Photo Rejuvenation Microdermabrasion",
+                            "title": "Photo Rejuvenation Microdermabrasion ($169 only)",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/photorejumicro.png",
-                            "subtitle": "Price: $169... includes: 3 x Microdermabrasion with TNS Mask, 3 X LED Face Mask",
+                            "subtitle": "Includes: \n\t3 x Microdermabrasion with TNS Mask \n\t3 X LED Face Mask",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -67,7 +67,8 @@ def packages(recipient_id):
                                     "webview_height_ratio": "tall"
                                 }
                             ]                
-                        }                    ],
+                        }                    
+                    ],
                     "buttons": [
                         {
                             "title": "View More",
