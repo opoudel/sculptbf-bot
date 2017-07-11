@@ -5,14 +5,11 @@ def packages(recipient_id):
           "recipient": {
               "id": recipient_id
           },
-          "whitelisted_domains":[
-             "https://www.sculptbf.co.nz"
-          ],          
         "message": {
         "attachment": {
             "type": "template",
             "payload": {
-                "template_type": "list",
+                "template_type": "generic",
                 "elements": [
                     {
                         "title": "Our affordable packaged plans designed just for you...",
@@ -22,7 +19,8 @@ def packages(recipient_id):
                                 "title": "Email Now",
                                 "type": "web_url",
                                 "url": "http://sculptbf.co.nz/index.php/our-prices-offers/",
-                                "webview_height_ratio": "tall"
+                                "webview_height_ratio": "tall",
+                                "fallback_url": "http://sculptbf.co.nz"
                             }
                         ]
                     },
@@ -35,7 +33,8 @@ def packages(recipient_id):
                                 "title": "Email Now",
                                 "type": "web_url",
                                 "url": "http://sculptbf.co.nz/index.php/contact-us/",
-                                "webview_height_ratio": "tall"
+                                "webview_height_ratio": "tall",
+                                "fallback_url": "http://sculptbf.co.nz"
                             }
                         ]                
                     },
@@ -47,7 +46,7 @@ def packages(recipient_id):
                             {
                                 "title": "Email Now",
                                 "type": "web_url",
-                                "url": "http://sculptbf.co.nz/index.php/contact-us/",
+                                "url": "https://sculptbf.co.nz/index.php/contact-us/",
                                 "webview_height_ratio": "tall",
                                 "fallback_url": "http://sculptbf.co.nz"
                             }
@@ -61,7 +60,7 @@ def packages(recipient_id):
                             {
                                 "title": "Email Now",
                                 "type": "web_url",
-                                "url": "http://sculptbf.co.nz/index.php/contact-us/",
+                                "url": "https://sculptbf.co.nz/index.php/contact-us/",
                                 "webview_height_ratio": "tall",
                                 "fallback_url": "http://sculptbf.co.nz"
                             }
