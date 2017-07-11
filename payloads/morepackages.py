@@ -20,7 +20,7 @@ def morepackages(recipient_id):
                                 "title": "Email Now",
                                 "type": "web_url",
                                 "messenger_extensions": "true",
-                                "url": "http://sculptbf.co.nz/index.php/contact-us/",
+                                "url": "https://sculptbf.co.nz/index.php/contact-us/",
                                 "webview_height_ratio": "tall",
                                 "fallback_url": "http://sculptbf.co.nz"
                             }
