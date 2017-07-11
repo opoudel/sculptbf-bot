@@ -18,19 +18,14 @@ def menu(recipient_id):
                     "payload":"ABOUT_US_PAYLOAD"
                   },
                   {
-                    "type":"postback",
-                    "title": "Packages",
-                    "payload":"VIEW_PACKAGES_PAYLOAD"
+                    "type":"web_url",
+                    "title":"Clinic Special",
+                    "url":"http://sculptbf.co.nz/index.php/clinic-special/"
                   },
                   {
-                    "type":"postback",
-                    "title": "Shop",
-                    "payload":"SHOP_PAYLOAD"
-                  },
-                  {
-                    "type":"phone_number",
-                    "payload":"+64095250911",
-                    "title": "Call Clinician"
+                    "type":"web_url",
+                    "title":"Services",
+                    "url":"http://sculptbf.co.nz/index.php/our-prices-offers"
                   }
                 ]
               }
