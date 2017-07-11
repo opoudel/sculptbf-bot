@@ -17,10 +17,20 @@ def aboutus(recipient_id):
                     "subtitle":"We are located at: Unit D,248 Marua Road,\nMount Wellington,\n1051 Auckland.",
                     "buttons":[
                       {
+                        "type":"phone_number",
+                        "title":"Call Expert",
+                        "payload": "+645250911"
+                      },
+                      {
+                        "type":"postback",
+                        "title": "Hot Deal!",
+                        "payload":"VIEW_PACKAGES_PAYLOAD"
+                      },
+                      {
                         "type":"postback",
                         "payload":"GET_STARTED_PAYLOAD",
                         "title": "Go back"
-                      }
+                      }                                    
                     ]
                   }
                 ]

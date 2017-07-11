@@ -15,20 +15,17 @@ def message(recipient_id):
                   {
                     "type":"postback",
                     "title": "Deals",
-                    "payload":"VIEW_PACKAGES_PAYLOAD",
-        						"webview_height_ratio": "compact"
+                    "payload":"VIEW_PACKAGES_PAYLOAD"
                   },
                   {
                     "type":"postback",
                     "title": "Shop",
-                    "payload":"SHOP_PAYLOAD",
-        						"webview_height_ratio": "compact"
+                    "payload":"SHOP_PAYLOAD"
                   },
                   {
                     "type":"postback",
                     "payload":"GET_STARTED_PAYLOAD",
-                    "title": "Main Menu",
-        						"webview_height_ratio": "compact"
+                    "title": "Main Menu"
                   }
                 ]
               }
