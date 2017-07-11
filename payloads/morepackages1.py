@@ -1,6 +1,6 @@
 import json
 
-def morepackages1(recipient_id):
+def morepackages(recipient_id):
   return json.dumps({
           "recipient": {
               "id": recipient_id

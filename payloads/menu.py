@@ -10,7 +10,7 @@ def menu(recipient_id):
               "type": "template",
               "payload": {
                 "template_type": "button",
-                "text": "Select from available menu where you want to go from here?",
+                "text": "Select from available menu where you want to go from here?\n",
                 "buttons":[
                   {
                     "type":"postback",
@@ -19,13 +19,23 @@ def menu(recipient_id):
                   },
                   {
                     "type":"postback",
-                    "title": "Packages & Deals",
+                    "title": "Packages",
                     "payload":"VIEW_PACKAGES_PAYLOAD"
                   },
                   {
+                    "type":"postback",
+                    "title": "Shop",
+                    "payload":"SHOP_PAYLOAD"
+                  },
+                  {
+                    "type":"postback",
+                    "title": "Clinic Special",
+                    "payload":"CLINIC_SPECIAL_PAYLOAD"
+                  },
+                  {
                     "type":"phone_number",
-                    "payload":"+18576360526",
-                    "title": "Call Representative"
+                    "payload":"+64095250911",
+                    "title": "Call Clinician"
                   }
                 ]
               }
