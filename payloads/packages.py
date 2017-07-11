@@ -32,7 +32,11 @@ def packages(recipient_id):
                         {
                             "title": "Dermal Pigmentation or Freckles",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/FacialPeel-1.png",
-                            "subtitle": "Price: $600... includes: 3 X Clarity Peel, 3 x Lactic Peel & 1 Set of Home Care Product",
+                            "subtitle": "Price: $600 \
+                                         includes: \
+                                            * 3 X Clarity Peel, \
+                                            * 3 x Lactic Peel & \
+                                            * 1 Set of Home Care Product"
                             "buttons": [
                                 {
                                     "type": "web_url",
