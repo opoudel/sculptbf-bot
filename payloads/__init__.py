@@ -14,11 +14,6 @@ def message(recipient_id):
                 "buttons":[
                   {
                     "type":"postback",
-                    "title": "About Us",
-                    "payload":"ABOUT_US_PAYLOAD"
-                  },
-                  {
-                    "type":"postback",
                     "title": "Packages",
                     "payload":"VIEW_PACKAGES_PAYLOAD"
                   },

@@ -28,11 +28,6 @@ def menu(recipient_id):
                     "payload":"SHOP_PAYLOAD"
                   },
                   {
-                    "type":"postback",
-                    "title": "Clinic Special",
-                    "payload":"CLINIC_SPECIAL_PAYLOAD"
-                  },
-                  {
                     "type":"phone_number",
                     "payload":"+64095250911",
                     "title": "Call Clinician"
