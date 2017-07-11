@@ -67,7 +67,7 @@ def morepackages(recipient_id):
                     ],
                  "buttons": [
                     {
-                        "title": "Go Back",
+                        "title": "View More",
                         "type": "postback",
                         "payload": "VIEW_MORE_PACKAGES1_PAYLOAD"
                     }
