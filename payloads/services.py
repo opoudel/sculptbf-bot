@@ -12,7 +12,7 @@ def services(recipient_id):
                     "template_type": "list",
                     "elements": [
                         {
-                            "title": "Our professional services are highly appretiatedcustomers",
+                            "title": "Our professional services are highly appretiated by our customers",
                             "subtitle": "Choose service you like",
                             "image_url":"https://sculptbf-bot.herokuapp.com/static/beauty.png",
                             "default_action": {

@@ -18,14 +18,14 @@ def shop(recipient_id):
                             "default_action": {
                                 "type": "web_url",
                                 "url": "http://sculptbf.co.nz/index.php/shop/",
-                                "webview_height_ratio": "large"
+                                "webview_height_ratio": "full"
                             },
                             "buttons": [
                                 {
                                     "type": "web_url",
                                     "title": "View",
                                     "url": "http://sculptbf.co.nz/index.php/shop/",
-                                    "webview_height_ratio": "large"
+                                    "webview_height_ratio": "full"
                                 }
                             ]
                         },
@@ -38,7 +38,7 @@ def shop(recipient_id):
                                     "type": "web_url",
                                     "title": "Buy",
                                     "url": "http://sculptbf.co.nz/index.php/product/oxygenetix-oxygenating-foundation-or-moisturizer/",
-                                    "webview_height_ratio": "large"
+                                    "webview_height_ratio": "full"
                                 }
                             ]                
                         },
@@ -51,7 +51,7 @@ def shop(recipient_id):
                                     "type": "web_url",
                                     "title": "Buy",
                                     "url": "http://sculptbf.co.nz/index.php/product/home-roller/",
-                                    "webview_height_ratio": "large"
+                                    "webview_height_ratio": "full"
                                 }
                             ]                
                         },
@@ -64,7 +64,7 @@ def shop(recipient_id):
                                     "type": "web_url",
                                     "title": "Buy",
                                     "url": "http://sculptbf.co.nz/index.php/product/below-knee-medical-stocking-class-a/",
-                                    "webview_height_ratio": "large"
+                                    "webview_height_ratio": "full"
                                 }
                             ]                
                         }                    
