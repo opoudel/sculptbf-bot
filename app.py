@@ -10,6 +10,24 @@ import payloads.packages
 import payloads.morepackages
 import payloads.morepackages1
 
+import payloads.special
+
+import payloads.services
+import payloads.services1
+import payloads.services2
+import payloads.services3
+import payloads.services4
+import payloads.services5
+import payloads.services6
+
+import payloads.shop
+import payloads.shop1
+import payloads.shop2
+import payloads.shop3
+import payloads.shop4
+
+
+
 from flask import Flask, request
 
 app = Flask(__name__, static_url_path='/static')
@@ -62,6 +80,32 @@ def webhook():
                         send_message(sender_id, payloads.morepackages.morepackages(sender_id))
                     if messaging_event["postback"]["payload"] == "VIEW_MORE_PACKAGES1_PAYLOAD":
                         send_message(sender_id, payloads.morepackages1.morepackages(sender_id))
+                    if messaging_event["postback"]["payload"] == "SERVICES":
+                        send_message(sender_id, payloads.services.services(sender_id))
+                    if messaging_event["postback"]["payload"] == "MORE_SERVICES_1":
+                        send_message(sender_id, payloads.services1.services(sender_id))
+                    if messaging_event["postback"]["payload"] == "MORE_SERVICES_2":
+                        send_message(sender_id, payloads.services2.services(sender_id))
+                    if messaging_event["postback"]["payload"] == "MORE_SERVICES_3":
+                        send_message(sender_id, payloads.services3.services(sender_id))
+                    if messaging_event["postback"]["payload"] == "MORE_SERVICES_4":
+                        send_message(sender_id, payloads.services4.services(sender_id))
+                    if messaging_event["postback"]["payload"] == "MORE_SERVICES_5":
+                        send_message(sender_id, payloads.services5.services(sender_id))
+                    if messaging_event["postback"]["payload"] == "MORE_SERVICES_6":
+                        send_message(sender_id, payloads.services6.services(sender_id))
+                    if messaging_event["postback"]["payload"] == "SHOPPING":
+                        send_message(sender_id, payloads.shop.shop(sender_id))
+                    if messaging_event["postback"]["payload"] == "MORE_SHOPPING_1":
+                        send_message(sender_id, payloads.shop1.shop(sender_id))
+                    if messaging_event["postback"]["payload"] == "MORE_SHOPPING_2":
+                        send_message(sender_id, payloads.shop2.shop(sender_id))
+                    if messaging_event["postback"]["payload"] == "MORE_SHOPPING_3":
+                        send_message(sender_id, payloads.shop3.shop(sender_id))
+                    if messaging_event["postback"]["payload"] == "MORE_SHOPPING_4":
+                        send_message(sender_id, payloads.shop4.shop(sender_id))
+                    if messaging_event["postback"]["payload"] == "SPECIAL":
+                        send_message(sender_id, payloads.special.special(sender_id))
     return "ok", 200
  
 def send_message(recipient_id, data):

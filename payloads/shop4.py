@@ -1,6 +1,6 @@
 import json
 
-def shop(recipient_id):
+def shop4(recipient_id):
   return json.dumps({
           "recipient": {
               "id": recipient_id
@@ -13,53 +13,53 @@ def shop(recipient_id):
                     "top_element_style": "compact",
                     "elements": [
                         {
-                            "title": "Lytera Brightening Complex",
-                            "image_url": "https://sculptbf-bot.herokuapp.com/static/lytera.png",
-                            "subtitle": "Price: $198",
+                            "title": "Cosmedix Clarity Serum",
+                            "image_url": "https://sculptbf-bot.herokuapp.com/static/clarity.png",
+                            "subtitle": "Price: $60",
                             "buttons": [
                                 {
                                     "type": "web_url",
                                     "title": "Buy",
-                                    "url": "http://sculptbf.co.nz/index.php/product/lytera-brightening-complex/",
+                                    "url": "http://sculptbf.co.nz/index.php/product/cosmedix-clarity-serum/",
                                     "webview_height_ratio": "tall"
                                 }
                             ]                
                         },
                         {
-                            "title": "Skin Medica Retinol Complex 0.5",
-                            "image_url": "https://sculptbf-bot.herokuapp.com/static/retinol.png",
-                            "subtitle": "Price: $108",
+                            "title": "Aspect Dr. SMC Cream",
+                            "image_url": "https://sculptbf-bot.herokuapp.com/static/aspect.png",
+                            "subtitle": "Price: $80",
                             "buttons": [
                                 {
                                     "type": "web_url",
                                     "title": "Buy",
-                                    "url": "http://sculptbf.co.nz/index.php/product/skin-medica-retinol-complex-0-5/",
+                                    "url": "http://sculptbf.co.nz/index.php/product/aspect-dr-smc-cream/",
                                     "webview_height_ratio": "tall"
                                 }
                             ]                
                         },
                         {
-                            "title": "Skin Medica TNS Eye Repair Cream",
-                            "image_url": "https://sculptbf-bot.herokuapp.com/static/tns.png",
-                            "subtitle": "Price: $150",
+                            "title": "Color Science Press Mineral Powder",
+                            "image_url": "https://sculptbf-bot.herokuapp.com/static/color.png",
+                            "subtitle": "Price: $80",
                             "buttons": [
                                 {
                                     "type": "web_url",
                                     "title": "Buy",
-                                    "url": "http://sculptbf.co.nz/index.php/product/skin-medica-tns-eye-repair-cream/",
+                                    "url": "http://sculptbf.co.nz/index.php/product/color-science-press-mineral-powder-foundation/",
                                     "webview_height_ratio": "tall"
                                 }
                             ]                
                         },
                         {
-                            "title": "Skin Medica Moistuizer with SPF 30+",
-                            "image_url": "https://sculptbf-bot.herokuapp.com/static/moistarizer.png",
-                            "subtitle": "Price: $65",
+                            "title": "Sierra Bees Lip Balm",
+                            "image_url": "https://sculptbf-bot.herokuapp.com/static/bees.png",
+                            "subtitle": "Price: $5",
                             "buttons": [
                                 {
                                     "type": "web_url",
                                     "title": "Buy",
-                                    "url": "http://sculptbf.co.nz/index.php/product/skin-medica-moisturizer-with-spf-30/",
+                                    "url": "http://sculptbf.co.nz/index.php/product/sierra-bees-lip-balm/",
                                     "webview_height_ratio": "tall"
                                 }
                             ]                
@@ -67,9 +67,9 @@ def shop(recipient_id):
                     ],
                     "buttons": [
                         {
-                            "title": "View More",
+                            "title": "Go Back",
                             "type": "postback",
-                            "payload": "MORE_SHOPPING_5"                        
+                            "payload": "GET_STARTED_PAYLOAD"
                         }
                     ]  
                 }

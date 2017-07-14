@@ -1,6 +1,6 @@
 import json
 
-def shop(recipient_id):
+def shop1(recipient_id):
   return json.dumps({
           "recipient": {
               "id": recipient_id

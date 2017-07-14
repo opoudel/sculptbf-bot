@@ -1,6 +1,6 @@
 import json
 
-def services2(recipient_id):
+def services(recipient_id):
   return json.dumps({
           "recipient": {
               "id": recipient_id

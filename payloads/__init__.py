@@ -20,7 +20,7 @@ def message(recipient_id):
                   {
                     "type":"postback",
                     "title": "Shop",
-                    "payload":"SHOP_PAYLOAD"
+                    "payload":"SHOPPING"
                   },
                   {
                     "type":"postback",
