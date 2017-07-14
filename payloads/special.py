@@ -33,7 +33,7 @@ def special(recipient_id):
                         {
                             "title": "Emerge treatment just $500 for 3 session",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/emerge.png",
-                            "subtitle": "EMERGE™ Fractional Laser is the \nlatest laser skin resurfacing technology",
+                            "subtitle": u"EMERGE™ Fractional Laser is the \nlatest laser skin resurfacing technology",
                             "buttons": [
                                 {
                                     "type": "web_url",
