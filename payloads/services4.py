@@ -15,6 +15,7 @@ def services(recipient_id):
                         {
                             "title": "Surgical & Stretch Mark",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/surgical.png",
+                            "subtitle":"The treatment has minimal downtime and can be used on any skin type",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -27,6 +28,7 @@ def services(recipient_id):
                         {
                             "title": "Hair Removal",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/hair-removal-2.png",
+                            "subtitle":"Get rid of unnecessary hair using square pluse technology",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -39,6 +41,7 @@ def services(recipient_id):
                         {
                             "title": "Mole Check & Removal",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/mole_check.png",
+                            "subtitle":"We use Pellevé S5 surgical to remove mole",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -51,6 +54,7 @@ def services(recipient_id):
                         {
                             "title": "Tatoo Removal",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/tatoo_removal.png",
+                            "subtitle":"Using Q-Switched YAG laser for tattoo removal have low risk of scarring",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -66,7 +70,12 @@ def services(recipient_id):
                             "title": "View More",
                             "type": "postback",
                             "payload": "MORE_SERVICES_5"                        
-                        }
+                        },
+                    {
+                        "type":"postback",
+                        "payload":"GET_STARTED_PAYLOAD",
+                        "title": "Go back"
+                    }
                     ]  
                 }
             }

@@ -15,7 +15,7 @@ def services(recipient_id):
                         {
                             "title": "Platelet Rich Plasma (PRP)",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/platlet.png",
-                            "subtitle": "Kiss those wrinkles goodbye",
+                            "subtitle": "Get enriched plasma around face",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -28,7 +28,7 @@ def services(recipient_id):
                         {
                             "title": "I2pl Facial Rejuvenation",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/l2pl.png",
-                            "subtitle": "Kiss those wrinkles goodbye",
+                            "subtitle": "Helps freckles, uneven pigmentation and more",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -41,6 +41,7 @@ def services(recipient_id):
                         {
                             "title": "LED",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/led.png",
+                            "subtitle": "This LED therapy tremendously helps oily and acne prone skin",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -53,6 +54,7 @@ def services(recipient_id):
                         {
                             "title": "Facial Peel",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/facial_peel.png",
+                            "subtitle":" Softens surface of skin and improve skin texture",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -68,7 +70,12 @@ def services(recipient_id):
                             "title": "View More",
                             "type": "postback",
                             "payload": "MORE_SERVICES_2"                        
-                        }
+                        },
+                    {
+                        "type":"postback",
+                        "payload":"GET_STARTED_PAYLOAD",
+                        "title": "Go back"
+                    }
                     ]  
                 }
             }

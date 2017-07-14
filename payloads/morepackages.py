@@ -70,6 +70,11 @@ def morepackages(recipient_id):
                         "title": "View More",
                         "type": "postback",
                         "payload": "VIEW_MORE_PACKAGES1_PAYLOAD"
+                    },
+                    {
+                        "type":"postback",
+                        "payload":"GET_STARTED_PAYLOAD",
+                        "title": "Go back"
                     }
                 ]  
             }

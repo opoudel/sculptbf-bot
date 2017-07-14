@@ -44,6 +44,11 @@ def morepackages(recipient_id):
                         "title": "Go Back",
                         "type": "postback",
                         "payload": "GET_STARTED_PAYLOAD"
+                    },
+                    {
+                        "type":"postback",
+                        "payload":"GET_STARTED_PAYLOAD",
+                        "title": "Go back"
                     }
                 ]  
             }

@@ -45,6 +45,7 @@ def services(recipient_id):
                         {
                             "title": "Dermal Fillers",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/dermal.png",
+                            "subtitle": "Any dermal fillers NZ $650 /per syringe",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -57,7 +58,7 @@ def services(recipient_id):
                         {
                             "title": "Skin Hydration",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/screen_hydration.png",
-                            "subtitle": " ",
+                            "subtitle": "Used to improve fine lines and acne scarred skin and much more",
                             "buttons": [
                                 {
                                     "type": "web_url",

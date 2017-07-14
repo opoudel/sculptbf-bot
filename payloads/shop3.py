@@ -1,6 +1,6 @@
 import json
 
-def shop3(recipient_id):
+def shop(recipient_id):
   return json.dumps({
           "recipient": {
               "id": recipient_id
@@ -70,7 +70,12 @@ def shop3(recipient_id):
                             "title": "View More",
                             "type": "postback",
                             "payload": "MORE_SHOPPING_4"                        
-                        }
+                        },
+                    {
+                        "type":"postback",
+                        "payload":"GET_STARTED_PAYLOAD",
+                        "title": "Go back"
+                    }
                     ]  
                 }
             }

@@ -15,6 +15,7 @@ def services(recipient_id):
                         {
                             "title": "Eye Dark Circle",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/eye_dark_circle.png",
+                            "subtitle":"Redensity [II] an inredensity injectable gel, keeps hydration of skin",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -30,7 +31,12 @@ def services(recipient_id):
                             "title": "Go Back",
                             "type": "postback",
                             "payload": "GET_STARTED_PAYLOAD"
-                        }
+                        },
+                    {
+                        "type":"postback",
+                        "payload":"GET_STARTED_PAYLOAD",
+                        "title": "Go back"
+                    }
                     ]  
                 }
             }

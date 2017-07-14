@@ -15,7 +15,7 @@ def services(recipient_id):
                         {
                             "title": "Body Fat Reduction",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/body_fat.png",
-                            "subtitle": "Kiss those wrinkles goodbye",
+                            "subtitle": "FDA-cleared non-invasive lipolysis of almost all part of body",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -28,7 +28,7 @@ def services(recipient_id):
                         {
                             "title": "Cellulite Reduction",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/cellulite.png",
-                            "subtitle": "Kiss those wrinkles goodbye",
+                            "subtitle": "The result: firmer, tighter younger looking skin",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -41,6 +41,7 @@ def services(recipient_id):
                         {
                             "title": "Acne & Acne Scar",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/acne.png",
+                            "subtitle":"We are expert in removing acne scar",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -53,6 +54,7 @@ def services(recipient_id):
                         {
                             "title": "Malesma/ Pigmentation",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/malesma.png",
+                            "subtitle":"No more gray-brown patches on the face",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -68,7 +70,12 @@ def services(recipient_id):
                             "title": "View More",
                             "type": "postback",
                             "payload": "MORE_SERVICES_4"                        
-                        }
+                        },
+                    {
+                        "type":"postback",
+                        "payload":"GET_STARTED_PAYLOAD",
+                        "title": "Go back"
+                    }
                     ]  
                 }
             }

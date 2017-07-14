@@ -15,6 +15,7 @@ def services(recipient_id):
                         {
                             "title": "Eyelash Growth",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/eyelash.png",
+                            "subtitle":"Enhance the look of luxurious eyelashes and brow hair",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -27,6 +28,7 @@ def services(recipient_id):
                         {
                             "title": "Hair Growth",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/hair-growth.png",
+                            "subtitle":"Our multi modalities approach, combat hair thinning",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -39,6 +41,7 @@ def services(recipient_id):
                         {
                             "title": "Haircut",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/haircut.png",
+                            "subtitle":"We provide affordable haircut",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -51,6 +54,7 @@ def services(recipient_id):
                         {
                             "title": "Nailcare & Makeup",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/nail_care.png",
+                            "subtitle":"Either fungi nails or mackup, we are here for you",
                             "buttons": [
                                 {
                                     "type": "web_url",
@@ -66,7 +70,12 @@ def services(recipient_id):
                             "title": "View More",
                             "type": "postback",
                             "payload": "MORE_SERVICES_6"                        
-                        }
+                        },
+                    {
+                        "type":"postback",
+                        "payload":"GET_STARTED_PAYLOAD",
+                        "title": "Go back"
+                    }
                     ]  
                 }
             }
