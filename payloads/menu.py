@@ -13,12 +13,12 @@ def menu(recipient_id):
                 "text": "Select from following available menu!!!\n",
                 "buttons":[
                   {
-                    "type":"web_url",
+                    "type":"postback",
                     "title":"Services",
                     "payload":"SERVICES"
                   },
                   {
-                    "type":"web_url",
+                    "type":"postback",
                     "title":"Specials",
                     "payload":"SPECIAL"
                   },
