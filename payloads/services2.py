@@ -71,12 +71,7 @@ def services(recipient_id):
                             "title": "View More",
                             "type": "postback",
                             "payload": "MORE_SERVICES_3"                        
-                        },
-                    {
-                        "type":"postback",
-                        "payload":"GET_STARTED_PAYLOAD",
-                        "title": "Go back"
-                    }
+                        }
                     ]  
                 }
             }

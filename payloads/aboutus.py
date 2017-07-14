@@ -23,8 +23,8 @@ def aboutus(recipient_id):
                       },
                       {
                         "type":"postback",
-                        "title": "Hot Deal!",
-                        "payload":"VIEW_PACKAGES_PAYLOAD"
+                        "title": "Special",
+                        "payload":"SPECIAL"
                       },
                       {
                         "type":"postback",

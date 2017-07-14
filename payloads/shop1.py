@@ -71,12 +71,7 @@ def shop(recipient_id):
                             "title": "View More",
                             "type": "postback",
                             "payload": "MORE_SHOPPING_2"                        
-                        },
-                    {
-                        "type":"postback",
-                        "payload":"GET_STARTED_PAYLOAD",
-                        "title": "Go back"
-                    }
+                        }
                     ]  
                 }
             }

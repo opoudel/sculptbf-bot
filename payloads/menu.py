@@ -10,7 +10,7 @@ def menu(recipient_id):
               "type": "template",
               "payload": {
                 "template_type": "button",
-                "text": "Select from following available menu!!!\n",
+                "text": "Tell us where we can take you from here?\n",
                 "buttons":[
                   {
                     "type":"postback",
@@ -19,8 +19,8 @@ def menu(recipient_id):
                   },
                   {
                     "type":"postback",
-                    "title":"Specials",
-                    "payload":"SPECIAL"
+                    "title":"Shop",
+                    "payload":"SHOPPING"
                   },
                   {
                     "type":"postback",
