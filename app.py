@@ -78,7 +78,7 @@ def send_message(recipient_id, data):
         log(r.text)
 
 
-def log(message):  # simple wrapper for logging to stdout on heroku
+def log(message):
     print str(message)
     sys.stdout.flush()
 

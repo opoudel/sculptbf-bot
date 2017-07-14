@@ -13,7 +13,7 @@ def aboutus(recipient_id):
                 "elements":[
                   {
                     "title":"Welcome to Body & Face Clinic",
-                    "image_url":"https://cdn.pixabay.com/photo/2013/07/13/12/50/beauty-160456_1280.png",
+                    "image_url":"https://sculptbf-bot.herokuapp.com/static/makeup-brush.png",
                     "subtitle":"We are located at: Unit D,248 Marua Road,\nMount Wellington,\n1051 Auckland.",
                     "buttons":[
                       {

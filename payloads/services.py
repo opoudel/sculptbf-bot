@@ -1,6 +1,6 @@
 import json
 
-def packages(recipient_id):
+def services(recipient_id):
   return json.dumps({
           "recipient": {
               "id": recipient_id
@@ -12,58 +12,57 @@ def packages(recipient_id):
                     "template_type": "list",
                     "elements": [
                         {
-                            "title": "Our affordable packaged plans designed just for you...",
-                            "subtitle": "Select plan that best suit your need",
+                            "title": "Our professional services are highly appretiatedcustomers",
+                            "subtitle": "Choose service you like",
                             "image_url":"https://sculptbf-bot.herokuapp.com/static/beauty.png",
                             "default_action": {
                                 "type": "web_url",
-                                "url": "http://sculptbf.co.nz/index.php/our-prices-offers/",
+                                "url": "http://sculptbf.co.nz/index.php/our-services/",
                                 "webview_height_ratio": "tall"
                             },
                             "buttons": [
                                 {
                                     "type": "web_url",
                                     "title": "View",
-                                    "url": "http://sculptbf.co.nz/index.php/our-prices-offers/",
+                                    "url": "http://sculptbf.co.nz/index.php/our-services/",
                                     "webview_height_ratio": "tall"
                                 }
                             ]
                         },
                         {
-                            "title": "Dermal Pigmentation or Freckles ($600 only)",
-                            "image_url": "https://sculptbf-bot.herokuapp.com/static/FacialPeel-1.png",
-                            "subtitle": "Includes: \n\t3 X Clarity Peel, \n\t3 x Lactic Peel, \n\t1 Set of Home Care Product",
+                            "title": "Botox, Dysport and Xeomin",
+                            "image_url": "https://sculptbf-bot.herokuapp.com/static/botox.png",
+                            "subtitle": "Kiss those wrinkles goodbye",
                             "buttons": [
                                 {
                                     "type": "web_url",
-                                    "title": "Email Now",
-                                    "url": "http://sculptbf.co.nz/index.php/contact-us/",
+                                    "title": "Detail",
+                                    "url": "http://sculptbf.co.nz/index.php/botox-fillers/",
                                     "webview_height_ratio": "tall"
                                 }
                             ]                
                         },
                         {
-                            "title": "Photo Rejuvenation Deal ($450 only)",
-                            "image_url": "https://sculptbf-bot.herokuapp.com/static/photoReju.png",
-                            "subtitle": "Includes: \n\tI2PL Plus x 6 Session (Face Only)\n\t1 Hair cut Free ",
+                            "title": "Dermal Fillers",
+                            "image_url": "https://sculptbf-bot.herokuapp.com/static/dermal.png",
                             "buttons": [
                                 {
                                     "type": "web_url",
-                                    "title": "Email Now",
-                                    "url": "https://sculptbf.co.nz/index.php/contact-us/",
+                                    "title": "Detail",
+                                    "url": "https://sculptbf.co.nz/index.php/dermal-filler/",
                                     "webview_height_ratio": "tall"
                                 }
                             ]                
                         },
                         {
-                            "title": "Photo Rejuvenation Microdermabrasion ($169 only)",
-                            "image_url": "https://sculptbf-bot.herokuapp.com/static/photorejumicro.png",
-                            "subtitle": "Includes: \n\t3 x Microdermabrasion with TNS Mask \n\t3 X LED Face Mask",
+                            "title": "Skin Hydration",
+                            "image_url": "https://sculptbf-bot.herokuapp.com/static/screen_hydration.png",
+                            "subtitle": " ",
                             "buttons": [
                                 {
                                     "type": "web_url",
-                                    "title": "Email Now",
-                                    "url": "https://sculptbf.co.nz/index.php/contact-us/",
+                                    "title": "Detail",
+                                    "url": "https://sculptbf.co.nz/index.php/skin-hydration/",
                                     "webview_height_ratio": "tall"
                                 }
                             ]                
@@ -73,7 +72,7 @@ def packages(recipient_id):
                         {
                             "title": "View More",
                             "type": "postback",
-                            "payload": "VIEW_MORE_PACKAGES_PAYLOAD"                        
+                            "payload": "MORE_SERVICES_1"                        
                         }
                     ]  
                 }
