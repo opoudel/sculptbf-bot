@@ -51,19 +51,6 @@ def services(recipient_id):
                                     "webview_height_ratio": "tall"
                                 }
                             ]                
-                        },
-                        {
-                            "title": "Nailcare & Makeup",
-                            "image_url": "https://sculptbf-bot.herokuapp.com/static/nail_care.png",
-                            "subtitle":"Either fungi nails or mackup, we are here for you",
-                            "buttons": [
-                                {
-                                    "type": "web_url",
-                                    "title": "Detail",
-                                    "url": "https://sculptbf.co.nz/index.php/nail-care-2/",
-                                    "webview_height_ratio": "tall"
-                                }
-                            ]                
                         }                    
                     ],
                     "buttons": [

@@ -13,6 +13,20 @@ def services(recipient_id):
                     "template_type": "list",
                     "top_element_style": "compact",
                     "elements": [
+,
+                        {
+                            "title": "Nailcare & Makeup",
+                            "image_url": "https://sculptbf-bot.herokuapp.com/static/nail_care.png",
+                            "subtitle":"Either fungi nails or mackup, we are here for you",
+                            "buttons": [
+                                {
+                                    "type": "web_url",
+                                    "title": "Detail",
+                                    "url": "https://sculptbf.co.nz/index.php/nail-care-2/",
+                                    "webview_height_ratio": "tall"
+                                }
+                            ]                
+                        },                        
                         {
                             "title": "Eye Dark Circle",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/eye_dark_circle.png",
