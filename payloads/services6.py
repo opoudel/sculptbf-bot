@@ -13,7 +13,6 @@ def services(recipient_id):
                     "template_type": "list",
                     "top_element_style": "compact",
                     "elements": [
-,
                         {
                             "title": "Nailcare & Makeup",
                             "image_url": "https://sculptbf-bot.herokuapp.com/static/nail_care.png",
